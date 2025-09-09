@@ -1,0 +1,10 @@
+print("welcome to Calvert Hall!")
+name = input("What is your name") 
+gradyear = input("what year do you graduate") 
+standing = input("what is your class standing") 
+email = input("what is you email") 
+print(f"My name is{name}, I graduate in {gradyear}, my class standing is {standing}, and my email is {email}") 
+x = input("what is num1: ")
+y = input("what is num2: ")
+z = x + y 
+print(z)
