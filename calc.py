@@ -1,0 +1,25 @@
+x = input("num1")
+y = input("num2")
+x = int(x) 
+y = int(y) 
+sum = x + y 
+print(f"the sum of {x} + {y} = {sum}")
+w = input("num3") 
+e = input("num4")
+w = int(w) 
+e = int(e) 
+difference = w - e 
+print(f"the difference of {w} - {e} = {difference}")
+x = input("num1")
+y = input("num2")
+x = int(x) 
+y = int(y) 
+product = x * y 
+print(f"the product of {x} * {y} = {product}")
+w = input("num3") 
+e = input("num4")
+w = int(w) 
+e = int(e) 
+quotient = w / e 
+print(f"the quotient of {w} / {e} = {quotient}")
+
