@@ -1,2 +1,7 @@
+print("welcome to the calculator!")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
 option = input ("Chose your operation") 
 if option
