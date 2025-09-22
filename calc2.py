@@ -5,7 +5,7 @@ print("3. Multiplication")
 print("4. Division")
 option = input ("Chose your operation") 
 if option== "addition":
-    x = input("num1")
+x = input("num1")
 y = input("num2")
 x = int(x) 
 y = int(y) 
