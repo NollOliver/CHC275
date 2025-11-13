@@ -1,14 +1,66 @@
-file = open ("day 1-20.txt","r")
+file = open ("day 1_20.txt","r")
 buffer = file.readlines()
-print(buffer)
 file.close()
-MSFT=[]
-AMZN=[]
-NVDA=[]
-MSFTline = buffer [0].strip().split(f",")
-AMZNline =buffer [0].strip().split(f",")
-NVDAline =buffer [0].strip().split(f",")
-print(MSFTline)
-print(AMZNline)
-print(NVDAline)
+MSFT = buffer [0].strip().split(f",")
+MSFT.pop(0)
+AMZN = buffer [1].strip().split(f",")
+AMZN.pop(0)
+NVDA = buffer [2].strip().split(f",")
+NVDA.pop(0)
+for i in range(len(MSFT)):
+    MSFT [i] = int(MSFT [i])
+    AMZN [i] = int(AMZN [i])
+    NVDA [i] = int(NVDA [i])
+print(MSFT)
+print(AMZN)
+print(NVDA)
+mean1 = sum(MSFT)/len(MSFT)
+mean2 = sum(AMZN)/len(AMZN)
+mean3 = sum(NVDA)/len(NVDA)
+print(mean1)
+print(mean2)
+print(mean3)
+file = open ("day 21_40.txt","r")
+buffer = file.readlines()
+file.close()
+MSFT2 = buffer [0].strip().split(f",")
+MSFT2.pop(0)
+AMZN2 = buffer [1].strip().split(f",")
+AMZN2.pop(0)
+NVDA2 = buffer [2].strip().split(f",")
+NVDA2.pop(0)
+for i in range(len(MSFT2)):
+    MSFT2 [i] = int(MSFT2 [i])
+    AMZN2 [i] = int(AMZN2 [i])
+    NVDA2 [i] = int(NVDA2 [i])
+   
+print(MSFT2)
+print(AMZN2)
+print(NVDA2)
+mean4 = sum(MSFT2)/len(MSFT2)
+mean5 = sum(AMZN2)/len(AMZN2)
+mean6 = sum(NVDA2)/len(NVDA2)
+print(mean4)
+print(mean5)
+print(mean6)
+buys = []
+if mean4 > mean1:
+    buys.append("MSFT")
+if mean5 > mean2:
+    buys.append("AMZN")
+if mean6 > mean3:
+    buys.append("NVDA")
+print(buys)
+file = open ("report.txt","w")
+buffer = []
+line0 = f"MSFT average 1,{mean1}, MSFT average 2, {mean4}\n"
+line1 = f"AMZN average 1,{mean2}, AMZN average 2, {mean5}\n"
+line2 = f"NVDA average 1,{mean3}, NVDA average 2, {mean6}\n"
+line3 = f"buys, {buys}"
+buffer.append(line0)
+buffer.append(line1)
+buffer.append(line2)
+buffer.append(line3)
+file.writelines(buffer)
+file.close()
 
