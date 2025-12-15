@@ -33,7 +33,6 @@ for i in range(len(MSFT2)):
     MSFT2 [i] = int(MSFT2 [i])
     AMZN2 [i] = int(AMZN2 [i])
     NVDA2 [i] = int(NVDA2 [i])
-   
 print(MSFT2)
 print(AMZN2)
 print(NVDA2)
