@@ -1,4 +1,19 @@
-actnames = ["Oliver"]
+actnames = ["Olivek you for banking with First Financial Credit Union! Have a wonderful day!" )
+        elif action == "Transfer":
+            actname = input("Which account would like to Transfer from?:")
+            actname2 = input("Which account would like to Transfer to?:")
+            money = input("how much would you like to Transfer?:")
+            money= int(money)
+            index= actnames.index(actname)
+            index2 = actnames.index(actname2)
+            actbalances[index] = actbalances[index] - money
+            actbalances[index2] = actbalances[index2] + money
+            print("Thank you for banking with First Financial Credit Union! Have a wonderful day!" )
+        elif action == "List All Accounts":
+            print(actnames)
+        elif action == "Add Account":
+            pass
+    r"]
 actbalances = [1,000]
 check = False
 while check == False:
@@ -23,22 +38,7 @@ while check == False:
             money= int(money)
             index= actnames.index(actname)
             actbalances[index] = actbalances[index] - money
-            print("Thank you for banking with First Financial Credit Union! Have a wonderful day!" )
-        elif action == "Transfer":
-            actname = input("Which account would like to Transfer from?:")
-            actname2 = input("Which account would like to Transfer to?:")
-            money = input("how much would you like to Transfer?:")
-            money= int(money)
-            index= actnames.index(actname)
-            index2 = actnames.index(actname2)
-            actbalances[index] = actbalances[index] - money
-            actbalances[index2] = actbalances[index2] + money
-            print("Thank you for banking with First Financial Credit Union! Have a wonderful day!" )
-        elif action == "List All Accounts":
-            print(actnames)
-        elif action == "Add Account":
-            pass
-        elif action == "Remove Account":
+            print("Than    elif action == "Remove Account":
             print("option 3")
         elif action == "quit":
             check = True
