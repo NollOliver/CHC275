@@ -76,7 +76,7 @@ def main():
             print("Column must be 1-7.")
             continue
         col_index = col - 1
-        if not dropPiece(BOARD, _PLAYER, col_index):
+        if not dropPiece(BOARD, PLAYER, col_index):
             print("That column is full..")
             continue
         if checkWinner(BOARD, PLAYER):
@@ -88,6 +88,6 @@ def main():
             print("\nTie game! ")
             break
     PLAYER = switchPlayer(PLAYER)
-    if __name__ == "__main__":
+if __name__ == "__main__":
      main() 
     
