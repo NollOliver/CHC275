@@ -1,4 +1,4 @@
- """
+"""
 Name: Oliver Noll
 Section:
 Description: Lab  - Connect 4 
@@ -64,37 +64,30 @@ def main():
         [0,0,0,0,0,0,0],
     ]
     PLAYER = "X"
-
     while True:
         drawBoard(BOARD)
-        print(f"\nPlayer {CURRENT_PLAYER}'s turn")
-
+        print(f"\nPlayer {PLAYER}'s turn")
         user_col = input("Choose a column (1-7): ").strip()
-
         if not user_col.isdigit():
             print("Enter a number from 1 to 7.")
             continue
-
         col = int(user_col)
         if col < 1 or col > COLUMNS:
             print("Column must be 1-7.")
             continue
-
         col_index = col - 1
-
         if not dropPiece(BOARD, _PLAYER, col_index):
-            print("That column is full. Pick another.")
+            print("That column is full..")
             continue
-
         if checkWinner(BOARD, PLAYER):
             drawBoard(BOARD)
             print(f"\nPlayer {PLAYER} WINS!")
             break
-
         if boardFull(BOARD):
             drawBoard(BOARD)
-            print("\nTie game! Board is full.")
+            print("\nTie game! ")
             break
-
-       PLAYER = switchPlayer(PLAYER)
-    def main() 
+    PLAYER = switchPlayer(PLAYER)
+    if __name__ == "__main__":
+     main() 
+    
